@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>IP Address</title>
+</head>
+<body>  
+
+    <div class="split-screen">
+    <!-- Left content -->
+    <div class="split-screen__half" id="left">
+    
+
+    <h1>Assignment 3 Question 1</h1>
+    <h3>by Keri Matthews<br>COMP466</h3>
+    </div>        
+    
+    <!-- Right content -->
+    <div class="split-screen__half">
+    <p>This page stores a persistent session variable, shows the user's ip address, and time zone </p>
+
+    <p> Your IP Address: {{user_ip}}<br>
+        You have visited this page {{ num_visits }} time{{ num_visits|pluralize }}.<br>
+        Your time zone is:
+    </p>
+    <p id="zone"></p>
+
+    </div>
+    </div>   
+    <script>
+        document.getElementById("zone").innerHTML =
+        Intl.DateTimeFormat().resolvedOptions().timeZone;
+     </script>
+</body>
+</html>

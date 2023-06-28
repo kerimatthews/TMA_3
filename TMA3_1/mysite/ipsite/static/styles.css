@@ -1,0 +1,30 @@
+/*Design ideas by 'https://csslayout.io/split-screen/' */
+
+html,
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+.split-screen {
+  display: flex;
+  height: 100%;
+
+}
+
+.split-screen__half {
+  flex: 1;
+  padding-top: 15%;
+}
+
+
+p {
+  text-align: center;
+  color: #00539C;
+}
+
+#left {
+  text-align: center;
+  color: #EEA47F;
+  background-color: #00539C;
+}
